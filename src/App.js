@@ -10,6 +10,7 @@ import {
 
 //components
 import Navbar from './components/Navbar'
+import About from './pages/About';
 
 const App = () => {
 
@@ -17,7 +18,9 @@ const App = () => {
     <Router>
       <Navbar/>
       <Switch>
-     
+        <Route path="/about">
+          <About/>
+        </Route>
       </Switch>
     </Router>
   );
