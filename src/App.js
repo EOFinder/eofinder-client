@@ -6,13 +6,18 @@ import {
   Link
 } from "react-router-dom";
 
+//pages
+
+//components
+import Navbar from './components/Navbar'
+
 const App = () => {
 
   return (
     <Router>
-
+      <Navbar/>
       <Switch>
-
+     
       </Switch>
     </Router>
   );
