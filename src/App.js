@@ -20,14 +20,15 @@ const App = () => {
   return (
     <Router>
       <Navbar/>
-      <Dashboard/>
-      <Footer/>
-      
       <Switch>
-        <Route path="/about">
+      <Route exact path="/">
+          <Dashboard/>
+      </Route>
+      <Route path="/about">
           <About/>
-        </Route>
+      </Route>
       </Switch>
+      <Footer/>
     </Router>
   );
 }
