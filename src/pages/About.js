@@ -21,21 +21,34 @@ const AboutFeo = styled.div`
 `;
 const WhyFeo = styled.div`
     padding: 50px 150px;
+    display: flex;
+    flex-direction: column;
 `;
 const WhyFeoCard = styled.div`
     -webkit-box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.15);
     box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.15);
     margin: 0px 8px;
+    width: 400px;
+    text-align: center;
 `;
 const ImageCard = styled.img`
     display: block;
     margin-left: auto;
     margin-right: auto;
 `;
-const DisplayFlex = styled.div`
+const DisplayFlexWrap = styled.div`
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 `;
+
+const DisplayFlexNoWrap = styled.div`
+    display: flex;
+    justify-content: space-between;
+  
+`;
+
 const Developer = styled.div`
     background-color: #3C6E71;
     padding: 30px;
@@ -53,6 +66,7 @@ const ParagrapJustify = styled.p`
     font-weight: 700;
     font-size: 150%;
 `;
+
 
 
 const About = () => {
@@ -83,7 +97,7 @@ const About = () => {
             </AboutFeo>
             <WhyFeo>
                 <Centerh2>Kenapa harus FEO?</Centerh2>
-                <DisplayFlex>
+                <DisplayFlexWrap>
                     <WhyFeoCard>
                         <p style={styles.centerText}>Banyak kategori pilihan</p>
                         <ImageCard src={require('../assets/images/category.svg')} alt="category" width="300px" style={styles.svgStyle}/>
@@ -96,11 +110,11 @@ const About = () => {
                         <p style={styles.centerText}>Event Terbaik</p>
                         <ImageCard src={require('../assets/images/review.svg')} alt="event" width="300px" style={styles.svgStyle}/>
                     </WhyFeoCard>
-                </DisplayFlex>
+                </DisplayFlexWrap>
             </WhyFeo>
             <Developer>
                 <Centerh2>Di balik layar FEO</Centerh2>
-                <DisplayFlex>
+                <DisplayFlexNoWrap>
                     <div style={styles.centerText}>
                         <p style={styles.centerText}>Ridho Abdul Majid</p>
                         <ImagesBacr src="https://images.unsplash.com/photo-1485206412256-701ccc5b93ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
@@ -121,7 +135,7 @@ const About = () => {
                         <ImagesBacr src="https://images.unsplash.com/photo-1485206412256-701ccc5b93ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
                         <p style={styles.centerText}>Fullstack</p>
                     </div>
-                </DisplayFlex>
+                </DisplayFlexNoWrap>
             </Developer>
         </Body>
     )
