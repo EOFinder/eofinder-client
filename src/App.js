@@ -10,13 +10,19 @@ import {
 
 //components
 import Navbar from './components/Navbar'
+import Dashboard from './pages/dashboard'
+import Footer from './components/Footer';
 import About from './pages/About';
+
 
 const App = () => {
 
   return (
     <Router>
       <Navbar/>
+      <Dashboard/>
+      <Footer/>
+      
       <Switch>
         <Route path="/about">
           <About/>
