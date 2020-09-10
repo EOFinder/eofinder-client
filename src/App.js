@@ -10,12 +10,18 @@ import {
 
 //components
 import Navbar from './components/Navbar'
+import Dashboard from './pages/dashboard'
+import Footer from './components/Footer';
+
 
 const App = () => {
 
   return (
     <Router>
       <Navbar/>
+      <Dashboard/>
+      <Footer/>
+      
       <Switch>
      
       </Switch>
