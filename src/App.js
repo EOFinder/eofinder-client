@@ -13,6 +13,7 @@ import Navbar from './components/Navbar'
 import Dashboard from './pages/dashboard'
 import Footer from './components/Footer';
 import About from './pages/About';
+import CreateEvents from './pages/CreateEvents'
 
 
 const App = () => {
@@ -21,12 +22,15 @@ const App = () => {
     <Router>
       <Navbar/>
       <Switch>
-      <Route exact path="/">
-          <Dashboard/>
-      </Route>
-      <Route path="/about">
-          <About/>
-      </Route>
+        <Route exact path="/">
+            <Dashboard/>
+        </Route>
+        <Route path="/about">
+            <About/>
+        </Route>
+        <Route path="/create-event">
+            <CreateEvents/>
+        </Route>
       </Switch>
       <Footer/>
     </Router>
