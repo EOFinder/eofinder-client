@@ -7,19 +7,24 @@ import {
 } from "react-router-dom";
 
 //pages
+import Register from './pages/Register/Register';
 
 //components
 import Navbar from './components/Navbar'
 import About from './pages/About';
 
+
 const App = () => {
 
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       <Switch>
         <Route path="/about">
-          <About/>
+          <About />
+        </Route>
+        <Route path="/register">
+          <Register />
         </Route>
       </Switch>
     </Router>
