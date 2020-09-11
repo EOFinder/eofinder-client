@@ -8,6 +8,7 @@ import {
 
 //pages
 import Register from './pages/Register/Register';
+import Login from './pages/Login/Login';
 
 //components
 import Navbar from './components/Navbar'
@@ -30,6 +31,9 @@ const App = () => {
         </Route>
         <Route path="/register">
           <Register />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         <Route path="/create-event">
           <CreateEvents />
