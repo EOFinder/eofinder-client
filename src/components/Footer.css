@@ -1,0 +1,58 @@
+
+footer {
+  background-color: whitesmoke;
+} 
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+footer h5 {
+  font-size: 0.88rem;
+}
+
+footer svg {
+  width: 2.13rem;
+  height: 2.13rem;
+}
+
+img{
+  display: flex;
+  align-items: center;
+}
+
+footer .impactbyte {
+  font-size: 14px;
+  font-weight: 500;
+  color: #221F1F;
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-around;
+  color: #696868;
+  font-weight: 300;
+  font-size: 1rem;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.tulisan{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-weight: 300;
+  font-size: 2rem;
+  font-size: 14px;
+  flex-direction: row;
+  padding-right: 20px;
+  }
+
+.icon{
+  display: flex;
+  justify-content: space-around;
+  /* padding-left: 5px;
+  padding-right: 5px; */
+  align-items: flex-end;
+  flex-direction: row;
+  
+}
