@@ -6,11 +6,13 @@ import {
   Link
 } from "react-router-dom";
 
+
 //pages
+import Detail from './pages/detail'
+import Dashboard from './pages/dashboard'
 
 //components
 import Navbar from './components/Navbar'
-import Dashboard from './pages/dashboard'
 import Footer from './components/Footer';
 
 
@@ -19,13 +21,16 @@ const App = () => {
   return (
     <Router>
       <Navbar/>
-      <Dashboard/>
-      <Footer/>
-      
       <Switch>
-     
+        <Route exact path='/'>
+          <Dashboard/>
+        </Route>
+        <Route path='/:id'>
+           <Detail/>
+        </Route>
       </Switch>
-    </Router>
+      <Footer/>     
+   </Router>
   );
 }
 
