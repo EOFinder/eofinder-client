@@ -16,8 +16,6 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import CreateEvents from './pages/CreateEvents'
 
-
-
 const App = () => {
 
   return (
@@ -25,23 +23,19 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path="/">
-            <Dashboard/>
+          <Dashboard />
         </Route>
         <Route path="/about">
-<<<<<<< HEAD
           <About />
         </Route>
         <Route path="/register">
           <Register />
-=======
-            <About/>
         </Route>
         <Route path="/create-event">
-            <CreateEvents/>
->>>>>>> 2fc50d808ea793e4cc2615c48a77363fcfc5b13c
+          <CreateEvents />
         </Route>
       </Switch>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }

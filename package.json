@@ -7,10 +7,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+<<<<<<< HEAD
     "availity-reactstrap-validation": "^2.6.1",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "dotenv": "^8.2.0",
+=======
+>>>>>>> 2fc50d808ea793e4cc2615c48a77363fcfc5b13c
     "infinite-react-carousel": "^1.2.11",
     "react": "^16.13.1",
     "react-blur": "^0.6.0",
