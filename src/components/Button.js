@@ -29,3 +29,29 @@ export const GoogleButton = styled(SocialButton)`
   color: tomato;
   border-color: tomato;
 `;
+
+export const CreateButton = styled.button`
+	box-shadow:inset 0px 1px 0px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:3px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:14px 76px;
+	text-decoration:none;
+    text-shadow:0px 0px 8px #3c6e71;
+    width:100%;
+  &:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+  &:active {
+	position:relative;
+	top:1px;
+}
+`
