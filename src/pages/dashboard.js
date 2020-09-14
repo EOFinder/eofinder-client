@@ -2,10 +2,8 @@ import React from 'react';
 import {
     Link
   } from "react-router-dom";
-import styled from 'styled-components';
 import { Button, Card, Col, Row, Container } from 'react-bootstrap'
-import Carousel from 'react-bootstrap/Carousel'
-
+import Carousel from 'react-bootstrap/Carousel';
 import './dashboard.css';
 
 
@@ -75,7 +73,7 @@ const Dashboard = () => {
                             <p style={styles.pstyles}>Yuk, cobain serunya nonton bioskop dari mobil! Hereditary, Cek Toko Sebelah, The Gentlemen, Milly & Mamet, dan film seru lainnya.
                             Beruntung sekali, pada kesempatan ini kita akan belajar cara membuat Carousel pada React. Di sini kita akan memanfaatkan library yang sudah ada, yaitu React-Slick.
                               Library tersebut merupakan modifikasi dari Slick Carousel yang telah diubah menjadi komponen React sehingga kita tidak perlu menginstall JQuery lagi.</p>
-                                  <Button variant="danger" size="lg">Click me       </Button>
+                                  <Button variant="danger" size="lg">Click me</Button>
                             </Row>                         
                         </Col>
                     </Row>                                               
@@ -110,7 +108,8 @@ const Dashboard = () => {
                                        workshop hingga online webinar LOKET sekarang
                                        hadir dengan fitur LOKET LIVE untuk event creator 
                                        yang membutuhkan layanan streaming langsung</p>
-                                  <Button variant="danger" size="sm">Buat event &gt;</Button>
+                                       <Link to="create-event"><Button variant="danger" size="sm">Buat event &gt;</Button></Link>
+                                  
                             </Col>
                       </Row>
                 </div>
