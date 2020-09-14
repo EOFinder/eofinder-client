@@ -1,7 +1,9 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
+import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios"
 import swal from "sweetalert"
+import {connect} from 'react-redux';
 import { Container, Row, Col, Form, FormGroup, Label, Input} from "reactstrap";
 import { AvForm, AvField } from 'availity-reactstrap-validation';
 
@@ -9,6 +11,8 @@ import { Button } from "../../components/Button"
 import background from "../../assets/images/register-bg.webp"
 import { RegisterContext } from "./RegisterContext"
 import './RegisterForm.css';
+
+import {registerUser} from '../../actions/userAction';
 
 const Wrapper = styled.section`
     height: 100vh;
@@ -19,7 +23,8 @@ const Title = styled.h1`
     color: #F6FFF8;
 `
 
-const RegisterForm = () => {
+const RegisterForm = (props) => {
+    console.log(props);
     const [dataUser, setDataUser] = useContext(RegisterContext)
 
     const handleChange = (event, name) => {
@@ -29,19 +34,14 @@ const RegisterForm = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-
-        try {
-            const response = await axios.post("http://localhost:4444/api/users/register", dataUser)
-            const { status, message } = response.data
-            if (status === "success") {
-                swal(message, "success");
-            } else {
-                swal(message, "Yeayyy!!", "success");
-            }
-        } catch (error) {
-            swal("Email is already registered", "please use another email", "warningen")
-        }
+        props.registerUser(dataUser, props.history);
     }
+    useEffect(() => {
+       if(props.auth.isAuthenticated) {
+           props.history.push('/')
+       }
+       
+    }, [])
 
     const styles = {
         rowStyleRight: {
@@ -143,5 +143,11 @@ const RegisterForm = () => {
     )
 
 }
+const mstp = (state) => {
+    return{
+        auth: state.user,
+        error: state.error
+    }
+}
 
-export default RegisterForm
+export default connect(mstp, {registerUser})(withRouter(RegisterForm))
