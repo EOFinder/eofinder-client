@@ -9,6 +9,9 @@ const Body = styled.div`
 const ImagesBacr = styled.img`
     border-radius: 50%;
     width: 80%;
+    display: inline;
+    padding-bottom: 5px;
+    
 `;
 const AboutFeo = styled.div`
     background-image: url(https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
