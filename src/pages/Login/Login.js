@@ -73,16 +73,8 @@ const Login = (props) => {
             email: userData.email,
             password: userData.password
         };
-        props.loginUser(user)
+        props.loginUser(user, props.history)
     }
-
-    useEffect(() => {
-       
-        if(props.auth.isAuthenticated){
-            props.history.push('/')
-        }
-    },[2])
-
     return (
         <>
             <Wrapper>
