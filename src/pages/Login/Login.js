@@ -75,6 +75,13 @@ const Login = (props) => {
         };
         props.loginUser(user, props.history)
     }
+
+    useEffect(() => {
+        if(props.auth.isAuthenticated === true){
+            props.history.push('/')
+        }
+    })
+
     return (
         <>
             <Wrapper>
