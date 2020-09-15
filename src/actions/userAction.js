@@ -31,24 +31,30 @@ export const registerUser = (user, history) => async dispatch => {
     })
 }
 
-export const loginUser = (user, history) => async dispatch => {
+export const loginUser = (user) => async dispatch => {
     dispatch({ type:" USER_LOGIN_LOADING", payload: true });
   
     axios
       .post("http://localhost:4444/api/users/login", user)
       .then(res => {
-          console.log(res);
-        const userData = {
-            _id: res.data.user._id,
-            email: res.data.user.email,
-            fullname: res.data.user.fullname,
-            token: res.data.token
+        if(res.status === 200){
+          const userData = {
+              _id: res.data.user._id,
+              email: res.data.user.email,
+              fullname: res.data.user.fullname,
+              token: res.data.token
+          }
+          localStorage.setItem("token", JSON.stringify(userData));
+          setAuthToken(userData.token);
+          const decoded = jwt_decode(userData.token);
+          console.log(decoded);
+          dispatch(setLogin(decoded));
+          dispatch({ type: "USER_LOGIN_SUCCESS", payload: true})
+
+          alert('login berhasil')
+        } else if(res.status === 202){
+          alert('password salah')
         }
-        localStorage.setItem("token", JSON.stringify(userData));
-        setAuthToken(userData.token);
-        const decoded = jwt_decode(userData.token);
-        dispatch(setLogin(decoded));
-        dispatch({ type: "USER_LOGIN_SUCCESS", payload: false})
     })
       .catch(err => {
         dispatch({
