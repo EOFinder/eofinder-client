@@ -13,7 +13,7 @@ const FooterHolder = styled.div`
   display: flex;
   justify-content: center;
   align-items: end;
-  background-color: whitesmoke;
+  background-color: none;
 `;
 
 const Footer = () => {
@@ -24,13 +24,16 @@ const Footer = () => {
         padding: '5px',
     },
     aStyle : {
-        color: '#333',
+        color: 'white',
         textDecoration: 'none',
         fontSize: '15px'
+    },
+    hStyle : {
+        color: 'white'
     }
 }
     return(
-        <footer className="bg-whitesmoke mt-5">
+        <footer className="bg-dark mt-5">
           <div className="container-fluid p-3 ">        
             
             <Row>
@@ -58,7 +61,7 @@ const Footer = () => {
               <Col>
                     <Row className="d-flex justify-content-end">                    
                       <div className="column">
-                          <h5 className="mr-2">FOLLOW US</h5>                    
+                          <h5 className="mr-2" style={styles.hStyle}>FOLLOW US</h5>                    
                           <div className="baris">                 
                               <div className="icon">
                                   <a href="/" className="mr-2">

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
   background: ${props => props.primary ? "#3C6E71" : "#F6FFF8"};
@@ -55,3 +55,23 @@ export const CreateButton = styled.button`
 	top:1px;
 }
 `
+export const ButtonLogin = styled.button`
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid white;
+  color: white;
+  margin: 0.5em 1em;
+  padding: 0.25em 1em;
+  cursor: pointer;
+  &:hover {
+	  background-color: #9B9B9B;
+  }
+  &:active {
+	border: none;
+	border-radius: none;
+  }
+  ${props => props.primary && css`
+	background-color: white;
+	color: #3C6E71;
+  `}
+`;
