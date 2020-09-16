@@ -6,13 +6,16 @@ import {
   Link,
 } from "react-router-dom";
 
+
 //pages
+
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
+import Detail from './pages/detail'
+import Dashboard from './pages/dashboard'
 
 //components
 import Navbar from './components/Navbar'
-import Dashboard from './pages/dashboard'
 import Footer from './components/Footer';
 import About from './pages/About';
 import CreateEvents from './pages/CreateEvents'
@@ -25,6 +28,9 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <Dashboard />
+        </Route>
+        <Route exact path="/detail">
+          <Detail />
         </Route>
         <Route path="/about">
           <About />
